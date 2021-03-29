@@ -1,0 +1,6 @@
+body {
+    margin: 0;
+}
+#gradientCanvas {
+    border:1px solid #d3d3d3;
+}
