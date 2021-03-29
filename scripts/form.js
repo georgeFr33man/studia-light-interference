@@ -46,12 +46,14 @@ function editData(btn) {
       .getElementsByTagName('input')[0].value,
     rightIntensity = +form.getElementsByClassName('rightIntensity')[0]
       .getElementsByTagName('input')[0].value;
-  delete data[Object.keys(data)[index - 1]];
-  data[detectorPosition] = {
-    right: rightIntensity,
-    left: leftIntensity,
+  if (index) {
+    delete data[Object.keys(data)[index - 1]];
+    data[detectorPosition] = {
+      right: rightIntensity,
+      left: leftIntensity,
+    }
+    createFormElements();
   }
-  createFormElements();
 }
 
 function addData(btn) {
